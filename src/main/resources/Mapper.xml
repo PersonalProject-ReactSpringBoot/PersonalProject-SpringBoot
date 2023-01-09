@@ -8,8 +8,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="login" parameterType="String" resultType="Pack.dto.MemberDTO">
 		select * from member where id=(#{id})
 	</select>
-	<insert id="insert" parameterType="int">
-		insert into table01(age) values(#{age})
+	<insert id="signUp" parameterType="Pack.dto.MemberDTO">
+		insert into member(id, password, name, age) values(#{id}, #{password}, #{name}, #{age})
+	</insert>
+	<insert id="board" parameterType="Pack.dto.BoardDTO">
+		insert into board(comment) values(#{comment})
 	</insert>
 	<!-- <delete id="test03" parameterType="int">
 		delete from table01 where age=#{age}	

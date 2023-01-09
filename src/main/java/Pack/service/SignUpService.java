@@ -7,11 +7,11 @@ import Pack.dao.MemberRepository;
 import Pack.dto.MemberDTO;
 
 @Service
-public class LoginService {
+public class SignUpService {
 	@Autowired
 	private MemberRepository memberRepository;
-
-	public MemberDTO login(MemberDTO memberDTO) {
-		return memberRepository.login(memberDTO);
+	
+	public MemberDTO signUp(MemberDTO memberDTO) {
+		return memberRepository.signUp(memberDTO);
 	}
 }
